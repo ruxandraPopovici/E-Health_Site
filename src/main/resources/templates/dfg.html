@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Patient</title>
+    <!--    <link href="../../static/css/patientMain.css" rel="stylesheet" type="text/css"/>&ndash;&gt;-->
+</head>
+
+<body>
+
+<ul class="nav">
+    <li>
+        <a href="https://i.kym-cdn.com/entries/icons/original/000/030/359/cover4.jpg" target="_self">
+            <i class="fa fa-user-md"></i>
+            <div class = "circle"></div>
+            <input class="title" type="submit" value="My Medics"/>
+        </a>
+    </li>
+
+    <li>
+        <a>
+            <form action="/personalInfo">
+                <i class="fa fa-user"></i>
+                <div>
+                    <div class = "circle"></div>
+                    <input class="title" type="submit" value="Personal Info"/>
+                </div>
+            </form>
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.youtube.com/watch?v=hbCMaVI5nXw&ab_channel=SoundLibrary" target = "_self">
+            <i class="fa fa-list"></i>
+            <div class = "circle"></div>
+            <input class="title" type="submit" value="Medical Data"/>
+        </a>
+    </li>
+
+    <li>
+        <a>
+            <form action="/patientSearch">
+                <i class="fa fa-search"></i>
+                <div class = "circle"></div>
+                <input class="title" type="submit" value="Search"/>
+            </form>
+        </a>
+    </li>
+
+    <li>
+        <a href="https://i.guim.co.uk/img/media/3aab8a0699616ac94346c05f667b40844e46322f/0_123_5616_3432/master/5616.jpg?width=445&quality=45&auto=format&fit=max&dpr=2&s=cdfeb9fcf58f8dd0d5dcb70ec4fb6673" target = "_self">
+            <i class="fa fa-heartbeat"></i>
+            <div class = "circle"></div>
+            <input class="title" type="submit" value="Recommendations"/>
+        </a>
+    </li>
+    <div class="background"></div>
+
+</ul>
+
+</body>
+
+<style>
+    @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+    body {
+        background: linear-gradient(45deg, #327696, #193040);
+        font-family: "Roboto", sans-serif;
+        text-transform: uppercase;
+        text-shadow: 0.5px 0.5px 0 #CCCCCC;
+    }
+
+    .background {
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transition: 0.75s;
+    }
+    .title {
+        display: none;
+        color: #4f42d6;
+    }
+    .nav {
+        padding: 0px;
+        width: 1000px;
+        margin: 100px auto 100% auto;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    li a {
+        padding: 30px;
+        float: left;
+        width: 200px;
+        text-align: center;
+        font-size: 35px;
+        color: #edf5e1;
+        text-decoration: none;
+    }
+
+    li a:hover .circle {
+        position: relative;
+        z-index: 1;
+        top: -60px;
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        animation: illuminate 2s ease-out infinite;
+        background: #fdc6be;
+
+    }
+
+    li i {
+        height: 50px;
+    }
+
+    li a:hover i{
+        transform: translateY(-10px);
+    }
+
+    li a .title {
+        font-size: 0px;
+
+    }
+
+    li a:hover .title {
+        transform: translateY(10px);
+        font-size: 15px;
+        transition: 0.5s;
+        display: inline-block;
+    }
+    .title{
+        background-color: transparent;
+        background-repeat: no-repeat;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+        outline: none;
+    }
+
+    li a.title:hover {
+        transform: translateY(-20px);
+    }
+
+    .nav li:first-child a {
+        background: #05386b !important;
+    }
+
+    .nav li:nth-child(2) a {
+        background: #379683 !important;
+    }
+
+    .nav li:nth-child(3) a {
+        background: #5cdb95 !important;
+    }
+
+    .nav li:nth-child(4) a {
+        background: #8ee4af !important;
+    }
+    .nav li:nth-child(5) a {
+        background: #afe0c2 !important;
+    }
+
+    .nav li:first-child:hover ~ .background {
+        background: #05386b;
+    }
+
+    .nav li:nth-child(2):hover ~ .background {
+        background: #379683;
+    }
+
+    .nav li:nth-child(3):hover ~ .background {
+        background: #5cdb95;
+    }
+
+    .nav li:nth-child(4):hover ~ .background {
+        background: #8ee4af;
+    }
+
+    .nav li:nth-child(5):hover ~ .background {
+        background: #afe0c2;
+    }
+    @keyframes illuminate {
+        0% {
+            transform: scale(0.7, 0.7);
+            opacity: 0.7;
+        }
+        50% {
+            opacity: 0.3;
+        }
+        100% {
+            transform: scale(1.15);
+            opacity: 0;
+        }
+    }
+
+</style>
+
+
+
